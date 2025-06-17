@@ -1,44 +1,49 @@
-import { Printer, Image, Shirt, Building, GraduationCap, Lightbulb } from "lucide-react";
+import laserIcon from "@assets/laser_1750152764007.png";
+import printIcon from "@assets/print_1026499_1750152764007.png";
+import printingIcon from "@assets/printing_1750152764007.png";
+import corporateIcon from "@assets/corporate_7713569_1750152764007.png";
+import educationIcon from "@assets/education_5432774_1750152764007.png";
+import illustrationIcon from "@assets/illustration_1750152764007.png";
 
 export default function ServicesSection() {
   const services = [
     {
-      icon: Printer,
+      icon: laserIcon,
       title: "Portable Laser Printing",
       description: "High-quality document printing with precision and speed for all your business needs.",
       features: ["Document printing", "Business cards", "Letterheads"],
       color: "bg-[hsl(24,100%,50%)]"
     },
     {
-      icon: Image,
+      icon: printingIcon,
       title: "Large Format Printing",
       description: "Eye-catching large format prints perfect for marketing and promotional materials.",
       features: ["Banners & posters", "Signage", "Exhibition displays"],
       color: "bg-[hsl(0,73%,50%)]"
     },
     {
-      icon: Shirt,
+      icon: printIcon,
       title: "UV-DTF & Screen Printing",
       description: "Advanced printing techniques for custom apparel and promotional merchandise.",
       features: ["T-shirt printing", "Custom merchandise", "Promotional items"],
       color: "bg-[hsl(43,96%,56%)]"
     },
     {
-      icon: Building,
+      icon: corporateIcon,
       title: "Corporate Branding",
       description: "Complete branding solutions to establish and strengthen your corporate identity.",
       features: ["Logo design", "Brand guidelines", "Marketing materials"],
       color: "bg-[hsl(24,100%,50%)]"
     },
     {
-      icon: GraduationCap,
+      icon: educationIcon,
       title: "School Branding",
       description: "Specialized branding and printing services tailored for educational institutions.",
       features: ["School uniforms", "Educational materials", "Institutional signage"],
       color: "bg-[hsl(0,73%,50%)]"
     },
     {
-      icon: Lightbulb,
+      icon: illustrationIcon,
       title: "Graphic Design",
       description: "Creative graphic design services to bring your vision to life with stunning visuals.",
       features: ["Creative concepts", "Visual identity", "Digital graphics"],
@@ -75,7 +80,7 @@ export default function ServicesSection() {
           {services.map((service, index) => (
             <div key={index} className="service-card bg-gray-50 rounded-xl p-8 text-center border border-gray-200 hover:shadow-lg">
               <div className={`${service.color} w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6`}>
-                <service.icon className="w-8 h-8 text-white" />
+                <img src={service.icon} alt={`${service.title} icon`} className="w-8 h-8" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
               <p className="text-gray-600 mb-6">{service.description}</p>
