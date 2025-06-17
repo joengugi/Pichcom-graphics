@@ -19,12 +19,12 @@ export default function AboutSection() {
             
             <div className="mt-10 grid grid-cols-2 gap-8">
               <div className="text-center p-6 bg-white rounded-lg shadow-md">
-                <div className="text-3xl font-bold text-[hsl(24,100%,50%)] mb-2">500+</div>
+                <div className="text-3xl font-bold text-[hsl(24,100%,50%)] mb-2">50+</div>
                 <div className="text-gray-600 font-medium">Projects Completed</div>
               </div>
               <div className="text-center p-6 bg-white rounded-lg shadow-md">
-                <div className="text-3xl font-bold text-[hsl(0,73%,50%)] mb-2">24/7</div>
-                <div className="text-gray-600 font-medium">Customer Support</div>
+                <div className="text-3xl font-bold text-[hsl(0,73%,50%)] mb-2">Free</div>
+                <div className="text-gray-600 font-medium">Delivery Around Nairobi</div>
               </div>
             </div>
           </div>

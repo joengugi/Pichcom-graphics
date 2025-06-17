@@ -4,6 +4,7 @@ import printingIcon from "@assets/printing_1750152764007.png";
 import corporateIcon from "@assets/corporate_7713569_1750152764007.png";
 import educationIcon from "@assets/education_5432774_1750152764007.png";
 import illustrationIcon from "@assets/illustration_1750152764007.png";
+import cncMachineImage from "@assets/alethia-briones-CNeX-281hsg-unsplash_1750153505926.jpg";
 
 export default function ServicesSection() {
   const services = [
@@ -53,8 +54,8 @@ export default function ServicesSection() {
 
   const galleryImages = [
     {
-      src: "https://images.unsplash.com/photo-1605649487212-47bdab064df7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      alt: "Modern printing press in operation"
+      src: cncMachineImage,
+      alt: "Professional CNC machine for precision manufacturing and engraving"
     },
     {
       src: "https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",

@@ -1,5 +1,7 @@
 import { scrollToSection } from "@/lib/smooth-scroll";
 import { Phone, Mail, MapPin } from "lucide-react";
+import { SiTiktok } from "react-icons/si";
+import logoImage from "@assets/Pichcom graphics_1750150523804.png";
 
 export default function Footer() {
   const quickLinks = [
@@ -17,13 +19,11 @@ export default function Footer() {
           {/* Company Info */}
           <div className="md:col-span-2">
             <div className="flex items-center mb-6">
-              <div className="bg-[hsl(24,100%,50%)] text-white px-3 py-2 rounded-lg font-bold text-lg mr-3">
-                PP
-              </div>
-              <div>
-                <span className="font-bold text-xl">PICHCOM PRINTS</span>
-                <div className="text-sm text-gray-400 font-medium">& GRAPHICS</div>
-              </div>
+              <img 
+                src={logoImage} 
+                alt="Pichcom Prints & Graphics Logo" 
+                className="h-12 w-auto"
+              />
             </div>
             <p className="text-gray-400 mb-6 max-w-md">
               Your trusted partner for professional printing and graphics solutions in Kenya. 
@@ -56,18 +56,27 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-lg mb-4">Contact Info</h4>
             <div className="space-y-3 text-gray-400">
-              <p className="flex items-center">
+              <a href="tel:+254740318091" className="flex items-center hover:text-white transition-colors">
                 <Phone className="w-5 h-5 mr-2 text-[hsl(24,100%,50%)]" />
                 +254 740 318 091
-              </p>
-              <p className="flex items-center">
+              </a>
+              <a href="mailto:pichcomgraphics@gmail.com" className="flex items-center hover:text-white transition-colors">
                 <Mail className="w-5 h-5 mr-2 text-[hsl(24,100%,50%)]" />
                 pichcomgraphics@gmail.com
-              </p>
+              </a>
               <p className="flex items-start">
                 <MapPin className="w-5 h-5 mr-2 mt-0.5 text-[hsl(24,100%,50%)]" />
                 Nairobi, Kenya
               </p>
+              <a 
+                href="https://www.tiktok.com/@_pichcom?_t=8nnTNWDkZzK&_r=1" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center hover:text-white transition-colors"
+              >
+                <SiTiktok className="w-5 h-5 mr-2 text-[hsl(24,100%,50%)]" />
+                @_pichcom
+              </a>
             </div>
           </div>
         </div>

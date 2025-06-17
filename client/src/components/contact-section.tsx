@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { SiTiktok } from "react-icons/si";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -54,19 +55,28 @@ export default function ContactSection() {
       icon: Phone,
       title: "Phone",
       info: "+254 740 318 091",
-      color: "bg-[hsl(24,100%,50%)]"
+      color: "bg-[hsl(24,100%,50%)]",
+      link: "tel:+254740318091"
     },
     {
       icon: Mail,
       title: "Email",
       info: "pichcomgraphics@gmail.com",
-      color: "bg-[hsl(0,73%,50%)]"
+      color: "bg-[hsl(0,73%,50%)]",
+      link: "mailto:pichcomgraphics@gmail.com"
     },
     {
       icon: MapPin,
       title: "Location",
       info: "Nairobi, Kenya",
       color: "bg-[hsl(43,96%,56%)]"
+    },
+    {
+      icon: SiTiktok,
+      title: "TikTok",
+      info: "@_pichcom",
+      color: "bg-black",
+      link: "https://www.tiktok.com/@_pichcom?_t=8nnTNWDkZzK&_r=1"
     },
     {
       icon: Clock,
@@ -107,7 +117,18 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-lg mb-1">{item.title}</h4>
-                    <p className="text-gray-300 whitespace-pre-line">{item.info}</p>
+                    {item.link ? (
+                      <a 
+                        href={item.link} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-gray-300 hover:text-white transition-colors whitespace-pre-line"
+                      >
+                        {item.info}
+                      </a>
+                    ) : (
+                      <p className="text-gray-300 whitespace-pre-line">{item.info}</p>
+                    )}
                   </div>
                 </div>
               ))}
