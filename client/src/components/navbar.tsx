@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { scrollToSection } from "@/lib/smooth-scroll";
+import logoImage from "@assets/Pichcom graphics_1750150523804.png";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,17 +37,15 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center cursor-pointer" onClick={() => handleNavClick('home')}>
-            <div className="bg-[hsl(24,100%,50%)] text-white px-3 py-2 rounded-lg font-bold text-lg">
-              PP
-            </div>
-            <div className="ml-3">
-              <span className="font-bold text-gray-900 text-lg">PICHCOM PRINTS</span>
-              <div className="text-sm text-gray-600 font-medium">& GRAPHICS</div>
-            </div>
+            <img 
+              src={logoImage} 
+              alt="Pichcom Prints & Graphics Logo" 
+              className="h-12 w-auto"
+            />
           </div>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <button
                 key={item.id}
@@ -56,14 +55,6 @@ export default function Navbar() {
                 {item.name}
               </button>
             ))}
-          </div>
-          
-          {/* Contact Info */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <div className="text-sm">
-              <div className="text-[hsl(24,100%,50%)] font-semibold">+254 740 318 091</div>
-              <div className="text-gray-600">pichcomgraphics@gmail.com</div>
-            </div>
           </div>
           
           {/* Mobile Menu Button */}
@@ -89,10 +80,6 @@ export default function Navbar() {
                 {item.name}
               </button>
             ))}
-            <div className="px-3 py-2 border-t">
-              <div className="text-[hsl(24,100%,50%)] font-semibold">+254 740 318 091</div>
-              <div className="text-gray-600 text-sm">pichcomgraphics@gmail.com</div>
-            </div>
           </div>
         </div>
       </div>
